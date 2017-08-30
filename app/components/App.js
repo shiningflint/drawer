@@ -30,37 +30,57 @@ class App extends React.Component {
     super(props);
 
     this.state = {
-      info_state: infos.info1
+      info_state: infos.info1,
+      info_window: 0
     }
 
     this.handleClick = this.handleClick.bind(this);
+    this.closeWindow = this.closeWindow.bind(this);
   }
 
   handleClick(e) {
     if (e.target.innerHTML === "1") {
       this.setState({
-        info_state: infos.info1
+        info_state: infos.info1,
+        info_window: 1
       });
     } else if (e.target.innerHTML === "2") {
       this.setState({
-        info_state: infos.info2
+        info_state: infos.info2,
+        info_window: 1
       });
     } else if (e.target.innerHTML === "3") {
       this.setState({
-        info_state: infos.info3
+        info_state: infos.info3,
+        info_window: 1
       });
     } else {
       this.setState({
-        info_state: infos.info4
+        info_state: infos.info4,
+        info_window: 1
       });
     }
   }
 
+  closeWindow() {
+    this.setState({
+      info_window: 0
+    })
+  }
+
   render() {
+    var infowindow = "";
+    if(this.state.info_window === 1) {
+      infowindow = <InfoWindow
+        info={this.state.info_state}
+        close={this.closeWindow} />;
+    } else {
+      infowindow = "";
+    }
     return(
       <div className="base-app">
         <MenuList topChange={this.handleClick} />
-        <InfoWindow info={this.state.info_state} />
+        {infowindow}
       </div>
     )
   }

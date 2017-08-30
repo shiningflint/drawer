@@ -7,6 +7,7 @@ class InfoWindow extends React.Component {
   render() {
     return(
       <div className="info-window">
+        <span className="close-window" onClick={this.props.close}>Close</span>
         <img src={this.props.info[0]} />
         <div className="info-text-wrapper" style={{backgroundColor: this.props.info[1]}}>
           <p className="in-txt">in:</p>
