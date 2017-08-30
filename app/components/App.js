@@ -31,7 +31,7 @@ class App extends React.Component {
 
     this.state = {
       info_state: infos.info1,
-      info_window: 0
+      info_window: false
     }
 
     this.handleClick = this.handleClick.bind(this);
@@ -42,45 +42,41 @@ class App extends React.Component {
     if (e.target.innerHTML === "1") {
       this.setState({
         info_state: infos.info1,
-        info_window: 1
+        info_window: true
       });
     } else if (e.target.innerHTML === "2") {
       this.setState({
         info_state: infos.info2,
-        info_window: 1
+        info_window: true
       });
     } else if (e.target.innerHTML === "3") {
       this.setState({
         info_state: infos.info3,
-        info_window: 1
+        info_window: true
       });
     } else {
       this.setState({
         info_state: infos.info4,
-        info_window: 1
+        info_window: true
       });
     }
   }
 
   closeWindow() {
     this.setState({
-      info_window: 0
+      info_window: false
     })
   }
 
   render() {
-    var infowindow = "";
-    if(this.state.info_window === 1) {
-      infowindow = <InfoWindow
-        info={this.state.info_state}
-        close={this.closeWindow} />;
-    } else {
-      infowindow = "";
-    }
     return(
       <div className="base-app">
         <MenuList topChange={this.handleClick} />
-        {infowindow}
+        {this.state.info_window &&
+          <InfoWindow
+            info={this.state.info_state}
+            close={this.closeWindow} />
+        }
       </div>
     )
   }
