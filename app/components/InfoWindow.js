@@ -7,10 +7,10 @@ class InfoWindow extends React.Component {
   render() {
     return(
       <div className="info-window">
-        <img src="https://source.unsplash.com/kUUacyTdChM/1024x768" />
-        <div className="info-text-wrapper" style={{backgroundColor: "#c84d4b"}}>
+        <img src={this.props.info[0]} />
+        <div className="info-text-wrapper" style={{backgroundColor: this.props.info[1]}}>
           <p className="in-txt">in:</p>
-          <h2 className="info-title">The Smell of a Coffee Dripper</h2>
+          <h2 className="info-title">{this.props.info[2]}</h2>
         </div>
       </div>
     )
