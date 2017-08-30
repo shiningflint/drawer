@@ -3,9 +3,36 @@
   "version": "1.0.0",
   "description": "Drawer web with react",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shiningflint/drawer.git"
+  },
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "start": "webpack-dev-server --open",
+    "create": "webpack"
+  },
+  "babel": {
+    "presets": [
+      "env",
+      "react"
+    ]
   },
   "author": "Adam",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "css-loader": "^0.28.5",
+    "html-webpack-plugin": "^2.30.1",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "style-loader": "^0.18.2",
+    "webpack-dev-server": "^2.7.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-react": "^6.24.1",
+    "webpack": "^3.5.5"
+  }
 }
