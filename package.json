@@ -1,0 +1,11 @@
+{
+  "name": "drawer",
+  "version": "1.0.0",
+  "description": "Drawer web with react",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Adam",
+  "license": "MIT"
+}
