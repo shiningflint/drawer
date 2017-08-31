@@ -101,3 +101,8 @@ img {
   padding: 16px;
   padding-top: 0;
 }
+.image-wrapper {
+  width: 100vw;
+  height: 75vw;
+  overflow: hidden;
+}

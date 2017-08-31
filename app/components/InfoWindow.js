@@ -38,8 +38,8 @@ class InfoWindow extends React.Component {
       this.state.show &&
         <div className={"info-window"+this.state.active}
           onTransitionEnd={this.transitionEnd}>
-          <span className="close-window" onClick={this.props.close}>Close</span>
-          <img src={this.props.info[0]} />
+          <p><span className="close-window" onClick={this.props.close}>Close</span></p>
+          <div className="image-wrapper"><img src={this.props.info[0]} /></div>
           <div className="info-text-wrapper" style={{backgroundColor: this.props.info[1]}}>
             <p className="in-txt">in:</p>
             <h2 className="info-title">{this.props.info[2]}</h2>
