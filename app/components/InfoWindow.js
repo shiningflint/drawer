@@ -27,13 +27,10 @@ class InfoWindow extends React.Component {
   }
 
   componentWillReceiveProps(new_props) {
-    console.log(new_props);
-    if (!new_props.infowindow) {
-      setTimeout(this.unMountStyle, 10)
-    } else {
-      this.setState({ show: true });
-      setTimeout(this.mountStyle, 10);
-    }
+    if (!new_props.infowindow)
+      return setTimeout(this.unMountStyle, 10)
+    this.setState({ show: true })
+    setTimeout(this.mountStyle, 10)
   }
 
   render() {
