@@ -4,22 +4,22 @@ var InfoWindow = require('./InfoWindow');
 
 var infos = [
   [
-    "https://source.unsplash.com/kUUacyTdChM/1024x768",
+    "https://s3-ap-southeast-1.amazonaws.com/acbw/uploads/2017/02/IMG_20170204_111814.jpg",
     "#c84d4b",
     "The Smell of a Coffee Dripper"
   ],
   [
-    "https://source.unsplash.com/AETe6TuEBck/1024x768",
+    "https://s3-ap-southeast-1.amazonaws.com/acbw/uploads/2017/02/IMG_20170204_112254.jpg",
     "#634bc8",
     "The Eerie Silent of the Big City"
   ],
   [
-    "https://source.unsplash.com/vM97bob4ZGk/1024x768",
+    "https://s3-ap-southeast-1.amazonaws.com/acbw/uploads/2017/02/IMG_20170204_112535.jpg",
     "#c8ac4b",
     "City Race"
   ],
   [
-    "https://source.unsplash.com/lcg5PdLCOWs/1024x768",
+    "https://s3-ap-southeast-1.amazonaws.com/acbw/uploads/2017/02/IMG_20170204_112604.jpg",
     "#3d9e4d",
     "The Fear of God is the First Step"
   ]
@@ -55,11 +55,10 @@ class App extends React.Component {
     return(
       <div className="base-app">
         <MenuList topChange={this.handleClick} />
-        {this.state.info_window &&
-          <InfoWindow
-            info={infos[this.state.info_state - 1]}
-            close={this.closeWindow} />
-        }
+        <InfoWindow
+          info={infos[this.state.info_state - 1]}
+          close={this.closeWindow}
+          infowindow={this.state.info_window} />
       </div>
     )
   }

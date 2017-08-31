@@ -81,6 +81,11 @@ img {
 .info-window {
   position: fixed;
   bottom: 0;
+  transition: transform 0.5s ease;
+  transform: translateY(100%);
+}
+.info-window.active {
+  transform: translateY(0);
 }
 .in-txt {
   color: rgba(255, 255, 255, 0.6);
