@@ -118,9 +118,9 @@ img {
   justify-content: center;
   align-items: center;
   padding: 4px;
-  background: linear-gradient(to bottom, #dedede, #b5b5b5);
+  background: linear-gradient(to bottom, #f3f3f3, #e1e1e1);
   border-bottom: 1px solid #9a9a9a;
-  border-top: 1px solid #d6d6d6;
+  border-top: 1px solid #c5c5c5;
 }
 .down-arrow {
   max-width: 18px;

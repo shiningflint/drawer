@@ -6,7 +6,7 @@ class Menu extends React.Component {
   }
   render() {
     return(
-      <button className="menu" onClick={this.props.goChange}>{this.props.number}</button>
+      <button className="menu" onClick={this.props.goChange.bind(this, this.props.number)}>{this.props.number}</button>
     )
   }
 }

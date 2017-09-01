@@ -41,7 +41,7 @@ class App extends React.Component {
 
   handleClick(e) {
     this.setState({
-      info_state: e.target.innerHTML,
+      info_state: e,
       info_window: true
     });
   }
@@ -56,7 +56,7 @@ class App extends React.Component {
     return(
       <div className="base-app">
         <MenuList topChange={this.handleClick} />
-        <MapWindow />
+        <MapWindow pinClick={this.handleClick} />
         <InfoWindow
           info={infos[this.state.info_state - 1]}
           close={this.closeWindow}
