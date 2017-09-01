@@ -105,6 +105,7 @@ img {
   width: 100vw;
   height: 75vw;
   overflow: hidden;
+  background-color: white;
 }
 .close-bar {
   display: flex;
@@ -118,4 +119,8 @@ img {
 .down-arrow {
   max-width: 18px;
   height: auto;
+}
+.map-window {
+  height: 200px;
+  background-color: gainsboro;
 }

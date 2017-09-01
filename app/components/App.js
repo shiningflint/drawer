@@ -1,6 +1,7 @@
-var React = require('react');
-var MenuList = require('./MenuList');
-var InfoWindow = require('./InfoWindow');
+import React from 'react';
+import MenuList from './MenuList';
+import InfoWindow from './InfoWindow';
+import MapWindow from './MapWindow';
 
 var infos = [
   [
@@ -55,6 +56,7 @@ class App extends React.Component {
     return(
       <div className="base-app">
         <MenuList topChange={this.handleClick} />
+        <MapWindow />
         <InfoWindow
           info={infos[this.state.info_state - 1]}
           close={this.closeWindow}
