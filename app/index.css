@@ -66,8 +66,14 @@ img {
   vertical-align: middle;
 }
 
+.app {
+  height: 100%;
+}
 .base-app {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 .menu-list {
   display: flex;
@@ -121,6 +127,6 @@ img {
   height: auto;
 }
 .map-window {
-  height: 200px;
+  flex: 1;
   background-color: gainsboro;
 }
