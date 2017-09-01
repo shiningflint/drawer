@@ -38,7 +38,7 @@ class InfoWindow extends React.Component {
       this.state.show &&
         <div className={"info-window"+this.state.active}
           onTransitionEnd={this.transitionEnd}>
-          <p><span className="close-window" onClick={this.props.close}>Close</span></p>
+          <p className="close-bar" onClick={this.props.close}><img src={require('../../images/down-arrow-minimalist.svg')} className="down-arrow" /></p>
           <div className="image-wrapper"><img src={this.props.info[0]} /></div>
           <div className="info-text-wrapper" style={{backgroundColor: this.props.info[1]}}>
             <p className="in-txt">in:</p>

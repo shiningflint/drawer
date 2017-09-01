@@ -106,3 +106,16 @@ img {
   height: 75vw;
   overflow: hidden;
 }
+.close-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4px;
+  background: linear-gradient(to bottom, #dedede, #b5b5b5);
+  border-bottom: 1px solid #9a9a9a;
+  border-top: 1px solid #d6d6d6;
+}
+.down-arrow {
+  max-width: 18px;
+  height: auto;
+}
