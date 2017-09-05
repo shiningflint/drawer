@@ -55,7 +55,6 @@ class App extends React.Component {
   render() {
     return(
       <div className="base-app">
-        <MenuList topChange={this.handleClick} />
         <MapWindow pinClick={this.handleClick} />
         <InfoWindow
           info={infos[this.state.info_state - 1]}

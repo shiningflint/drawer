@@ -1,4 +1,5 @@
 import React from 'react';
+import LocationsFile from '../../assets/locations.json';
 
 class MapWindow extends React.Component {
   constructor(props) {
@@ -6,16 +7,21 @@ class MapWindow extends React.Component {
   }
 
   componentDidMount() {
-    var uluru = {lat: -25.363, lng: 131.044};
     var map = new google.maps.Map(document.getElementById('map'), {
-      zoom: 4,
-      center: uluru
+      zoom: 14,
+      center: LocationsFile[0]
     });
-    var marker = new google.maps.Marker({
-      position: uluru,
-      map: map
+    var markers = this.setMarkers(LocationsFile, map);
+  }
+
+  setMarkers(locations, map) {
+    locations.map((location, index) => {
+      var onemark = new google.maps.Marker({
+        position: location,
+        map: map
+      });
+      onemark.addListener('click', this.props.pinClick.bind(this, index+1));
     });
-    marker.addListener('click', this.props.pinClick.bind(this, 1));
   }
 
   render() {

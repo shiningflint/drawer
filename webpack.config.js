@@ -12,7 +12,8 @@ var config = {
     rules: [
       { test: /\.(js)$/, use: 'babel-loader' },
       { test: /\.css$/, use: ['style-loader', 'css-loader'] },
-      {test: /\.(jpe?g|png|gif|svg)$/i, loader: "file-loader?name=images/[name].[ext]"}
+      {test: /\.(jpe?g|png|gif|svg)$/i, loader: 'file-loader?name=images/[name].[ext]'},
+      {test: /\.json$/, use: 'json-loader'}
     ]
   },
   plugins: [new HtmlWebpackPlugin({
